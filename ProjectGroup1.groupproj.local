@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2016/10/28 17:17:25.000.206,C:\Users\Anderson\Documents\Embarcadero\Studio\Projects\ProjectGroup1.groupproj=C:\Projetos\Delphi 10\Estudo\AppTethering101\ProjectGroup1.groupproj</Transaction>
+  </Transactions>
+	<Default.Personality>
+		<Projects ActiveProject="C:\Projetos\Delphi 10\Estudo\AppTethering101\RemoteApp.dproj"/>
+	</Default.Personality>
+</BorlandProject>

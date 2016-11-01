@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{15186A52-6FF2-4CC2-B823-5BED829223AF}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="pHubAppVCL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="RemoteApp.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="pHubAppVCL">
+        <MSBuild Projects="pHubAppVCL.dproj"/>
+    </Target>
+    <Target Name="pHubAppVCL:Clean">
+        <MSBuild Projects="pHubAppVCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="pHubAppVCL:Make">
+        <MSBuild Projects="pHubAppVCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="RemoteApp">
+        <MSBuild Projects="RemoteApp.dproj"/>
+    </Target>
+    <Target Name="RemoteApp:Clean">
+        <MSBuild Projects="RemoteApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RemoteApp:Make">
+        <MSBuild Projects="RemoteApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="pHubAppVCL;RemoteApp"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="pHubAppVCL:Clean;RemoteApp:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="pHubAppVCL:Make;RemoteApp:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
