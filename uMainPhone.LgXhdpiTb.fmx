@@ -6,6 +6,7 @@ inherited Form2_LgXhdpiTb: TForm2_LgXhdpiTb
     Size.Width = 480.000000000000000000
     inherited Label1: TLabel
       Size.Width = 480.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
     end
   end
 end

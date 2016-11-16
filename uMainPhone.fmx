@@ -54,7 +54,7 @@ object Form2: TForm2
       Size.Width = 333.000000000000000000
       Size.Height = 48.000000000000000000
       Size.PlatformDefault = False
-      TextSettings.Font.Style = [fsBold]
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
       TextSettings.HorzAlign = Center
       Text = 'Label1'
     end

@@ -56,12 +56,7 @@ end;
 
 procedure TForm2.TetheringManager1EndAutoConnect(Sender: TObject);
 begin
-  try
-    TetheringAppProfile1.Connect(TetheringManager1.RemoteProfiles.First);
-  except on E: Exception do
-    ShowMessage(e.Message);
-  end;
-  ShowMessage('foi');
+  TetheringAppProfile1.Connect(TetheringManager1.RemoteProfiles.First);
   Button2.Enabled := True;
   Button3.Enabled := True;
 end;
